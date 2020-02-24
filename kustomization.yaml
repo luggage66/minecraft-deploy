@@ -1,0 +1,6 @@
+resources:
+- base.yaml
+- storageclass.yaml
+namespace: minecraft
+patchesStrategicMerge:
+- deployment.yaml
