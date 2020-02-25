@@ -11,7 +11,6 @@ help: ## print this help
 deploy: ## Deploy jupyterhub to kubernetes
 	$(HELM_BIN) upgrade --install $(RELEASE_NAME) $(MINECRAFT_HELM_CHART) \
 		--namespace $(NS_NAME) \
-		--set minecraftServer.eula=true,minecraftServer.Difficulty=hard \
 		--post-renderer ./kustomize-helm.sh \
 		-f values.yaml \
 		-f secret-values.yaml
@@ -19,7 +18,6 @@ deploy: ## Deploy jupyterhub to kubernetes
 template: ## Deploy minecraft to kubernetes
 	$(HELM_BIN) upgrade --install $(RELEASE_NAME) $(MINECRAFT_HELM_CHART) \
 		--namespace $(NS_NAME) \
-		--set minecraftServer.eula=true,minecraftServer.Difficulty=hard \
 		--post-renderer ./kustomize-helm.sh \
 		--debug --dry-run \
 		-f values.yaml \
