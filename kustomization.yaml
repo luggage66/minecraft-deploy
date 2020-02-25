@@ -3,4 +3,4 @@ resources:
 - storageclass.yaml
 namespace: minecraft
 patchesStrategicMerge:
-- deployment.yaml
+- deployment-strategy.yaml
