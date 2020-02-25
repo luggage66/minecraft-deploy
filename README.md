@@ -1,6 +1,8 @@
+This is just a values.yaml + kustomization of the stable/minecraft helm chart for my use.
+
 # Requirements
 
-* Helm3 in your path
+* helm3 in your path
 * kustomize in your path
 * kubectl configured for your cluster
 
@@ -14,14 +16,11 @@ minecraftServer:
     password: "my strong password"
 ```
 
-2. Create the namespace
+2. `kubectl create ns minecraft` - Create the namespace
+3. `make deploy` - Deploy helm chart
 
-```sh
-kubectl create ns minecraft
-```
 
-3. Deploy
+# Cleanup
 
-```sh
-make deploy
-```
+1. `make undeploy` - will delete the helm chart, but leave the namespace
+2. `kubectl delete ns` - Delete the namespace (your PVCs will be deleted)
