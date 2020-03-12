@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minecraft-minecraft
+spec:
+  template:
+    spec:
+      containers:
+      - name: minecraft-minecraft
+        ports:
+        - name: http-metrics
+          containerPort: 1234
+          protocol: TCP
