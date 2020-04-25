@@ -2,6 +2,7 @@ resources:
 - base.yaml
 - storageclass.yaml
 - podmonitor.yaml
+- poddisruptionbudget.yaml
 namespace: minecraft
 patchesStrategicMerge:
 - deployment-strategy.yaml
