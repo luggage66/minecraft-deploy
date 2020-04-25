@@ -1,6 +1,6 @@
 NS_NAME ?= minecraft
 RELEASE_NAME ?= minecraft
-HELM_BIN ?= helm3
+HELM_BIN ?= helm
 MINECRAFT_HELM_CHART ?= stable/minecraft
 
 help: ## print this help
