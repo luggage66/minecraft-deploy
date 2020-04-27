@@ -157,7 +157,7 @@ minecraftServer:
 extraEnv:
   # CF_SERVER_MOD: https://media.forgecdn.net/files/2778/975/FTBRevelationServer_3.2.0.zip
   INIT_MEMORY: 1g
-  MAX_MEMORY: 7g
+  MAX_MEMORY: 6g
 
 persistence:
   ## minecraft data Persistent Volume Storage Class
